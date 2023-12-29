@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { UserServiceService } from './user-service.service';
 import { RouterLink } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -29,7 +31,7 @@ import { RouterLink } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,  
-    RouterLink,
+    RouterLink, NgbModule, BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration(),

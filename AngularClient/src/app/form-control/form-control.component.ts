@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../user';
 import { UserServiceService } from '../user-service.service';
+import { UserType } from '../user-type';
+import { UserTypeServiceService } from '../user-type-service.service';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MatFormFieldModule} from '@angular/material/form-field';
+
 
 @Component({
   selector: 'app-form-control',
@@ -14,9 +19,16 @@ export class FormControlComponent {
   name = new FormControl('');
   email = new FormControl('');
   user : User;
+  UserTypeList : UserType [];
+  type : UserType;
   
-  constructor (private userService: UserServiceService){
+  constructor (private userService: UserServiceService, private userTypeService: UserTypeServiceService){
     this.user = new User();
+    this.userTypeService.getAllTypeUser().subscribe(
+      data => {
+        this.UserTypeList = data as UserType[];
+      }
+    )
   }
 
   SendAnswers() {
@@ -34,12 +46,14 @@ export class FormControlComponent {
     
     this.user.email = mail;
     this.user.name = Name;
-
+    //this.user.type = this.type;
     this.userService.save(this.user);
 
   }
 
-  
+  SetCurrentTypeOf(type: UserType){
+    this.type = type;
+  }
   
   
 }

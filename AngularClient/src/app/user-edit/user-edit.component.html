@@ -7,7 +7,15 @@
     <br>
     <input id="email" type="mail" [formControl]="email" class="form-control">
 
-
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select a Type
+        </button>
+        <ul class="dropdown-menu">
+          <li *ngFor="let UserType of UserTypeList"><a class="dropdown-item" (click)="SetCurrentTypeOf(UserType)">{{UserType.type}}</a></li>
+          
+        </ul>
+      </div>
 
     <button type="button" (click)="SendAnswers()" class="btn btn-primary">Update Name</button>
 </div>

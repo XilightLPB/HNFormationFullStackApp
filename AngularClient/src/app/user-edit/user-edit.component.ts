@@ -18,10 +18,17 @@ export class UserEditComponent {
   name = new FormControl('');
   email = new FormControl('');
   user : User;
+  UserTypeList: UserType[];
+  type : UserType;
   
-  constructor (private userService: UserServiceService,  private route:ActivatedRoute){
+  constructor (private userService: UserServiceService,  private route:ActivatedRoute, private userTypeService: UserTypeServiceService){
     const Id = this.route.snapshot.params['id'];
     console.log(`going for Transaction ID:${Id}`);
+    this.userTypeService.getAllTypeUser().subscribe(
+      data => {
+        this.UserTypeList = data as UserType[];
+      }
+    )
     this.userService.getbyID(Id).subscribe(
       (user) => 
       {
@@ -54,5 +61,9 @@ export class UserEditComponent {
 
     this.userService.save(this.user);
 
+  }
+
+  SetCurrentTypeOf(type: UserType){
+    this.type = type;
   }
 }
