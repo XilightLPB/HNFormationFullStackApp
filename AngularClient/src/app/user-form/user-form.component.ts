@@ -2,16 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { User } from '../user';
 
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
-  styleUrl: './user-form.component.scss'
+  styleUrl: './user-form.component.scss',
 })
 export class UserFormComponent implements OnInit{
-    Name= new FormControl('');
-    email= new FormControl('');
+
+  formGroup: FormGroup = new FormGroup({
+    Name: new FormControl('Erwan'),
+    email: new FormControl('emaignemontamat@hn-services.fr'),
+  });
  
 
   user : User;
@@ -24,20 +27,21 @@ export class UserFormComponent implements OnInit{
     console.log("starting things");
   }
 
-  DoSubmit(){
-    console.log("submitting...");
-    let name = this.Name.value;
-    let mail = this.email.value;
-    let message = "Data is:" + name + " " + mail;
-    this.userService.save(this.user).subscribe();
-    console.log("Submitted");
-    console.log(message)
-    this.Name= new FormControl('');
-    this.email= new FormControl('');
+   DoSubmit() {
+    console.log('submitting...');
+    let values = this.formGroup.value;
+    let message = 'Data is:' + values.Name + ' ' + values.email;
+    alert(message);
+    this.userService.save(values).subscribe();
+    console.log('Submitted');
+    console.log(message);
+    this.formGroup.patchValue({
+      Name: '',
+      email: '',
+    });
   }
 
-
-
-    
- 
+  DoTest(){
+    console.log("I did get trigger")
+  }
 }

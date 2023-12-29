@@ -1,15 +1,12 @@
-<form (onSubmit)="DoSubmit()">
+<form (ngSubmit)="DoSubmit()">
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="Name">
+  <br>
+  <label for="last-name">email: </label>
+  <input id="last-name" class="form-control" type="mail" formControlName="email" size=60 >
+  <button class="form-control" type="submit" class="btn">Submit</button>
+</form>
 
-    <label for="name">Name: </label>
-    <input id="name" type="text" formControlName="tName" value="Erwan">
-  
-    <br>
-    <label for="last-name">email: </label>
-    <input id="last-name" class="form-control" type="mail" formControlName="email" value="emaignemontamat@hn-services.fr" size=60 >
-
-    <button id="submitButton" class="form-control" type="button" class="btn" (click)="DoSubmit()">Submit</button>
-  
-  </form>
 
 
     

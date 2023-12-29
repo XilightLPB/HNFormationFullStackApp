@@ -20,7 +20,21 @@ export class UserServiceService {
   }
 
   public save(user: User){
-    return this.http.post<User>(this.usersUrl, user, {responseType: 'text' as 'json'});
+    return this.http.post<User>(this.usersUrl+'/create', user, {responseType: 'text' as 'json'});
 
+  }
+
+  public update(user: User){
+    return this.http.post<User>(this.usersUrl+'/update', user, {responseType: 'text' as 'json'});
+  }
+
+  public getbyID(id: number){
+    
+    return this.http.get<User>(this.usersUrl+'/'+id,{responseType: 'text' as 'json'});
+  }
+
+  public delete(user: User){
+    let id = user.id;
+    return this.http.post<User>(this.usersUrl+'/'+id,{responseType: 'text' as 'json'});
   }
 }

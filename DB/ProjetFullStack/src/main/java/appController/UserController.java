@@ -27,6 +27,7 @@ public class UserController {
         this.typeUserService = typeUserService;
     }
 
+    //done
     @GetMapping("")
     public List<User> findAll() {
         return userService.findAll();
@@ -43,6 +44,8 @@ public class UserController {
         return user;
     }
 
+    
+    //done
     @PostMapping("/create")
     public User addUser(@RequestBody User user) {
         // get the typeUser of the user in the database

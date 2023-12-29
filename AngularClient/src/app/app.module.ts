@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserTypeFormComponent } from './user-type-form/user-type-form.component';
+
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserTypeListComponent } from './user-type-list/user-type-list.component';
@@ -13,12 +13,17 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { UserServiceService } from './user-service.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserTypeFormComponent,
-    UserFormComponent,
+ 
+    
     UserListComponent,
     UserTypeListComponent,
     UserTypeEditComponent,
@@ -30,10 +35,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,  
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    UserServiceService,
   ],
   bootstrap: [AppComponent]
 })
