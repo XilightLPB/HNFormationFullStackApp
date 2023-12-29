@@ -52,14 +52,12 @@ export class UserEditComponent {
     else {
       mail = this.email.value;
       Name = this.name.value;
-      this.email.reset();
-      this.name.reset();
     }
     
     this.user.email = mail;
     this.user.name = Name;
 
-    this.userService.save(this.user);
+    this.userService.update(this.user);
 
   }
 

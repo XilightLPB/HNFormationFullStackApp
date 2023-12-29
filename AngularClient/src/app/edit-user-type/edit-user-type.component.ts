@@ -41,6 +41,6 @@ export class EditUserTypeComponent implements OnInit{
       this.userType.type = this.Typename.value;
     }
 
-    this.userTypeService.createTypeUser(this.userType);
+    this.userTypeService.updateTypeUser(this.userType);
   }
 }
