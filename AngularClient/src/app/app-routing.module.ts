@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserFormComponent } from './user-form/user-form.component';
+
 
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { HomeComponent } from './home/home.component';
@@ -12,17 +12,18 @@ import { FormControlComponent } from './form-control/form-control.component';
 import { UserTypeFormControlComponent } from './user-type-form-control/user-type-form-control.component';
 
 const routes: Routes = [
-  {path:'addUser', component:UserFormComponent},
+  {path:'addUser', component:FormControlComponent},
   {path:'UserEdit/#id', component:UserEditComponent},
   {path:'Users', component:UserListComponent},
   {path:'TypeEdit', component:UserTypeEditComponent},
   {path:'TypeForm', component:UserTypeFormControlComponent},
   {path:'TypeList', component:UserTypeListComponent},
+  {path: 'AddUser', component:FormControlComponent},
   
 
 
 
-  {path:'home', component:FormControlComponent},
+  {path:'home', component:HomeComponent},
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'**', component:PageNotFoundComponent}
 ];

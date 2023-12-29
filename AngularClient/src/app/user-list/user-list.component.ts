@@ -8,7 +8,7 @@ import { UserServiceService } from '../user-service.service';
   styleUrl: './user-list.component.scss'
 })
 export class UserListComponent implements OnInit{
-[x: string]: any;
+
   UsersList: User[] =[];
 
   constructor(private userService: UserServiceService){}
@@ -17,5 +17,9 @@ export class UserListComponent implements OnInit{
     this.userService.getAll().subscribe(data => {this.UsersList = data;});
 
     
+  }
+
+  deletethisUser(user: User){
+    this.userService.delete(user);
   }
 }

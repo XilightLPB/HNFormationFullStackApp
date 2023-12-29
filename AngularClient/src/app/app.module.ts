@@ -4,7 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { UserFormComponent } from './user-form/user-form.component';
+
 import { UserListComponent } from './user-list/user-list.component';
 import { UserTypeListComponent } from './user-type-list/user-type-list.component';
 import { UserTypeEditComponent } from './user-type-edit/user-type-edit.component';
