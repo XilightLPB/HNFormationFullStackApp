@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { UserType } from '../user-type';
 import { UserTypeServiceService } from '../user-type-service.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-user-type-form-control',

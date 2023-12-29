@@ -14,7 +14,7 @@
                       <td>{{User.name}}</td>
                       <td>{{User.email}}</td>
                       <td> <button type ="button" class="btn btn-danger" (click)="deletethisUser(User)">Delete that User</button></td>
-                      <td> <button type="button" class="btn btn-primary" [routerLink]="['/EditUser', User.id]">Edit that User profile</button></td>
+                      <td> <button class="btn btn-primary" [routerLink]="['/EditUser', User.id]">Edit that User profile</button></td>
                   </tr>
               </tbody>
       </table>

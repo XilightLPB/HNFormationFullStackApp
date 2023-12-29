@@ -1,1 +1,6 @@
-<p>edit-user-type works!</p>
+<div class="mb-3">
+    <label for="TypeName" class="form-label">Type Name? </label>
+    <input id="TypeName" type="text" class="form-control" [formControl]="Typename">
+    <br>
+    <button type="button" (click)="SendAnswer()" class="btn btn-primary">Create a new type</button>
+    </div>

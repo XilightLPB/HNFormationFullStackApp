@@ -1,1 +1,13 @@
-<p>user-edit works!</p>
+<div class="mb-3">
+    <label for="name" class="form-label">Name: </label>
+    <br>
+    <input id="name" type="text" [formControl]="name" class="form-control">
+
+    <label for="email" class="form-label">Mail: </label>
+    <br>
+    <input id="email" type="mail" [formControl]="email" class="form-control">
+
+
+
+    <button type="button" (click)="SendAnswers()" class="btn btn-primary">Update Name</button>
+</div>
