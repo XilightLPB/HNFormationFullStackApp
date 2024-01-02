@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `profile_management`;
+CREATE DATABASE IF NOT EXISTS `fullstack_app`;
 USE `fullstack_app`;
 
 
