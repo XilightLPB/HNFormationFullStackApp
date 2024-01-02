@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-form-control',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule, MatFormFieldModule],
   templateUrl: './form-control.component.html',
   styleUrl: './form-control.component.scss'
 })
