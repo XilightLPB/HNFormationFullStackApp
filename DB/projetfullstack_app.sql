@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS `profile_management`;
-USE `profile_management`;
+USE `fullstack_app`;
 
 
 DROP TABLE IF EXISTS `user`;

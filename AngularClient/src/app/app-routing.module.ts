@@ -15,6 +15,7 @@ import { EditUserTypeComponent } from './edit-user-type/edit-user-type.component
 const routes: Routes = [
   {path:'addUser', component:FormControlComponent},
   {path:'UserEdit/#id', component:UserEditComponent},
+  {path:'TypeEdit/#id', component:EditUserTypeComponent},
   {path:'Users', component:UserListComponent},
   {path:'TypeEdit', component:EditUserTypeComponent},
   {path:'TypeForm', component:UserTypeFormControlComponent},

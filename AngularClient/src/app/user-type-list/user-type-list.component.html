@@ -12,7 +12,7 @@
                     <tr *ngFor="let UserType of UsersTypes">
                         <td>{{UserType.type}}</td>
                         <td> <button type ="button" class="btn btn-danger" (click)="deletethisType(UserType.id)">Delete that Type</button></td>
-                        <td> <button class="btn btn-primary" [routerLink]="['/EditUserType', UserType.id]">Edit that User</button></td>
+                        <td> <button class="btn btn-primary" [routerLink]="['/EditUserType', UserType.type]">Edit that User</button></td>
                     </tr>
                 </tbody>
         </table>

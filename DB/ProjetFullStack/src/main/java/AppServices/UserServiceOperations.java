@@ -34,8 +34,6 @@ public class UserServiceOperations implements UserService {
 
     @Override
     public User save(User user) {
-        System.err.println();
-
         return userRepository.save(user);
     }
 

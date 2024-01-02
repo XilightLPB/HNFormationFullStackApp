@@ -6,6 +6,7 @@ import { UserType } from '../user-type';
 import { UserTypeServiceService } from '../user-type-service.service';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatFormFieldModule} from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
 
 
 @Component({

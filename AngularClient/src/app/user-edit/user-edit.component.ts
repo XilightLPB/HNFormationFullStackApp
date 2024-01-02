@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../user';
 import { UserServiceService } from '../user-service.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-edit',

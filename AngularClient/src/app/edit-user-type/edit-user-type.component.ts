@@ -4,6 +4,7 @@ import { UserType } from '../user-type';
 import { UserTypeServiceService } from '../user-type-service.service';
 import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-edit-user-type',
